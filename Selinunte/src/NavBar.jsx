@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import "./Navbar.css"
 import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.css'
 import { faShoppingCart, faGlobe, faBook } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./NavBar.css"
 
 const NavBar= () => {
-  const preHeaderRef = useRef<HTMLDivElement>(null);
-  const navbarRef = useRef<HTMLDivElement>(null);
-  const [preHeaderHeight, setPreHeaderHeight] = useState<number>(0);
+  const preHeaderRef = useRef(null);
+  const navbarRef = useRef(null);
+  const [preHeaderHeight, setPreHeaderHeight] = useState(0);
 
   useEffect(() => {
     if (preHeaderRef.current && navbarRef.current) {
